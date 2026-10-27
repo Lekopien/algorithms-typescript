@@ -49,3 +49,7 @@ Deployed free on Cloudflare Workers (`wrangler.jsonc`, build command `npm run bu
 ## License
 
 MIT
+
+## Author
+
+Built by **David Lekopien** ([@Lekopien](https://github.com/Lekopien)) · [lekopien.com](https://lekopien.com)
