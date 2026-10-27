@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Algorithm Visualizer · Lekopien</title>
+  <meta name="description" content="Watch sorting and pathfinding algorithms run, powered by a fully tested TypeScript library.">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="https://lekopien.com">lekopien<span>.</span>algo</a>
+  <nav><a href="#sort">Sorting</a><a href="#path">Pathfinding</a><a href="#trie">Autocomplete</a><a href="https://github.com/Lekopien/algorithms-typescript">GitHub</a></nav>
+</div></header>
+<main class="wrap">
+  <div class="hero">
+    <span class="tag">Computer science · TypeScript</span>
+    <h1>Algorithms you can watch</h1>
+    <p class="lead">Heaps, tries, union-find, LRU caches, Dijkstra, A*, topological sort and dynamic programming, written in strict TypeScript with property-style tests. These demos run on the same code.</p>
+  </div>
+
+  <section id="sort">
+    <h2>Sorting</h2>
+    <div class="controls">
+      <select id="sortAlgo" aria-label="Sorting algorithm"><option value="bubble">Bubble sort</option><option value="insertion">Insertion sort</option><option value="selection">Selection sort</option><option value="quick" selected>Quicksort</option></select>
+      <label>Speed <input id="speed" type="range" min="1" max="60" value="20"></label>
+      <button class="btn" id="sortRun">Sort</button><button class="btn ghost" id="shuffle">Shuffle</button>
+      <span id="sortStats" class="stat"></span>
+    </div>
+    <div class="card bars" id="bars"></div>
+  </section>
+
+  <section id="path">
+    <h2>Pathfinding</h2>
+    <div class="controls">
+      <select id="pathAlgo" aria-label="Pathfinding algorithm"><option value="bfs">Breadth-first search</option><option value="dijkstra">Dijkstra</option><option value="astar" selected>A* (Manhattan)</option></select>
+      <button class="btn" id="pathRun">Find path</button><button class="btn ghost" id="maze">Random walls</button><button class="btn ghost" id="clear">Clear</button>
+      <span id="pathStats" class="stat"></span>
+    </div>
+    <p class="hint">Click or drag on the grid to draw walls. Green is the start, pink is the goal.</p>
+    <div class="card grid-wrap"><div id="grid" class="pgrid"></div></div>
+  </section>
+
+  <section id="trie">
+    <h2>Autocomplete with a trie</h2>
+    <input id="q" placeholder="Type: al, gra, dy…" autocomplete="off" aria-label="Search terms">
+    <ul id="suggest" class="chips"></ul>
+  </section>
+</main>
+<footer><div class="wrap">Built by <a href="https://lekopien.com">Lekopien</a>. <a href="https://github.com/Lekopien/algorithms-typescript">Source on GitHub</a>.</div></footer>
+<script type="module" src="./main.ts"></script>
+</body>
+</html>
